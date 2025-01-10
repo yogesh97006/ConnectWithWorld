@@ -1,0 +1,3 @@
+.feed{
+    flex:5.5 ;  /*! insted of flex we can give percentage but writting flex is better idea we can split it many pieces's we want*/
+}
