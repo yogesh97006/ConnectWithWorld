@@ -1,6 +1,8 @@
 import React from 'react'
 import './Sidebar.css'
 import { Bookmark, Chat, Event, HelpOutline, People, PlayCircleFilled, QuestionMark, RssFeed, School, ThumbUpAlt, VideoFileRounded, WorkOutline } from '@mui/icons-material'
+import { User } from '../../dummyData'
+import CloseFriends from '../CloseFriends/CloseFriends'
 
 function Sidebar() {
   return (
@@ -47,30 +49,9 @@ function Sidebar() {
         <button className="sidebarButton">Show More</button>
         <hr className='sidebarHr'/>
         <ul className="sidebarFriendList">
-          <li className="sidebarFriend">
-            <img src="" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">Virat Kohli</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">Virat Kohli</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">Virat Kohli</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">Virat Kohli</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">Virat Kohli</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">Virat Kohli</span>
-          </li>
+          {User.map((photo)=>(
+              <CloseFriends key={photo.id} friends={photo} />
+          ))}
         </ul>
       </div>
     </div>
